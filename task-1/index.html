@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flags</title>
+  <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .flag {
+        width: 300px;
+        border: 2px solid black;
+      }
+      #flag-ukraine {
+        height: 200px;
+      }
+      #flag-japan {
+        height: 200px;
+      }
+      #flag-iceland {
+        height: 216px;
+      }
+      #flag-czechia {
+        height: 200px;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flag" id="flag-ukraine">
+     <div style="height: 50%; background-color: #0057b8;"></div>
+     <div style="height: 50%; background-color: #ffd700;"></div>
+    </div>
+
+    <div class="flag" id="flag-japan">
+      <div style="height: 100%; width: 100%; background-color: white; align-items: center; display: flex; justify-content: center;">
+        <div style="
+          height: 120px;
+          width: 120px; 
+          border-radius: 60px;
+          background-color: #BC002D;"
+        ></div>
+      </div>
+    </div>
+
+    <div class="flag" id="flag-iceland">
+      <div style="height: 100%; width: 100%; position: relative; background-color: #02529C;">
+        <div style="
+          width: 48px;
+          height: 100%;
+          position: absolute;
+          left: 84px;
+          background-color: #ffffff;
+        "></div>
+        <div style="
+          width: 100%;
+          height: 48px;
+          position: absolute;
+          top: 84px;
+          background-color: #ffffff;
+        "></div>
+        <div style="
+          width: 24px;
+          height: 100%;
+          position: absolute;
+          left: 96px;
+          background-color: #DC1E35;
+        "></div>
+        <div style="
+          width: 100%;
+          height: 24px;
+          position: absolute;
+          top: 96px;
+          background-color: #DC1E35;
+        "></div>
+      </div>
+    </div>
+
+    <div class="flag" id="flag-czechia">
+      <div style="height: 100%; width: 100%; position: relative;">
+        <div style="
+          height: 50%; 
+          width: 100%;
+          position: absolute;
+          background-color: #FFFFFF;
+        "></div>
+        <div style="
+          height: 50%; 
+          width: 100%;
+          top: 50%;
+          position: absolute;
+          background-color: #D7141A;
+        "></div>
+        <div style="
+          height: 0;
+          width: 0;
+          position: absolute;
+          border-top: 100px solid transparent;
+          border-bottom: 100px solid transparent;
+          border-left: 150px solid #11457E;
+        "></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
