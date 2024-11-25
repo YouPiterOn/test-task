@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
   aspect-ratio: 4 / 3;
 }
 
@@ -13,6 +13,19 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  border: 5px solid gray;
+  transition: 0.3s;
+}
+
+.image:nth-child(4n + 1) {
+  border: 5px solid red;
+}
+
+.image:hover {
+  transform: rotate(45deg);
+  border: 5px solid yellow;
+  transition: 0.3s;
 }
 
 @media (max-width: 900px) {
@@ -21,6 +34,9 @@
     grid-template-rows: repeat(6, 1fr);
     aspect-ratio: 2 / 6;
   }
+  .image:nth-child(2n + 1) {
+    border: 5px solid red;
+  }
 }
 
 @media (max-width: 500px) {
@@ -28,5 +44,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12, 1fr);
     aspect-ratio: 1 / 12;
+  }
+  .image:nth-child(n + 1) {
+    border: 5px solid red;
   }
 }
