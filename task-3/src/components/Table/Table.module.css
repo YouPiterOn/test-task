@@ -1,0 +1,10 @@
+.headerCell {
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: lightgray;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}

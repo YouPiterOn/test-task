@@ -1,5 +1,9 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const dotenv = require('dotenv');
+
+const localEnv = dotenv.config().parsed;
 
 module.exports = (env) => {
   return {
@@ -20,15 +24,31 @@ module.exports = (env) => {
           },
         },
         {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
-        },
+          test: /\.css$/i,
+          use: [
+              'style-loader',
+              {
+                  loader: 'css-loader',
+                  options: {
+                      esModule: false,
+                      modules: {
+                          localIdentName: '[local]--[name]--[hash:base64:5]'
+                      }
+                  }
+              }
+          ]
+      },
       ],
     },
     plugins: [
       new HtmlWebpackPlugin({
         template: './public/index.html',
       }),
+      new webpack.DefinePlugin({
+        'process.env.API_BASE_URL': localEnv.API_BASE_URL
+            ? JSON.stringify(localEnv.API_BASE_URL)
+            : JSON.stringify(process.env.API_BASE_URL),
+      })
     ],
     devServer: {
       static: './dist',

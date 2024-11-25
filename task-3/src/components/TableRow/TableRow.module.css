@@ -1,0 +1,14 @@
+.tableCell {
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.link {
+  color: blue;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: blueviolet;
+}
